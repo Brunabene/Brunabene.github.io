@@ -1,0 +1,229 @@
+
+    div
+{  display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   text-indent: 1em;
+   
+}
+header{
+ 
+text-align:center ;
+background-image:url("montanha.jpg");
+height:30%;
+background-size: cover;
+background-repeat: no-repeat;
+padding-top: 50px;
+
+}
+     
+p.white
+{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: bold;
+    font-size: 40px;
+color: white;
+}
+a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:ghostwhite;
+}
+section{
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100px;
+    padding-bottom: 80px;
+     text-align:justify;
+    background-color: blanchedalmond;
+   
+}
+section.comidas{ 
+     display: block;
+  width: 47%;
+    background-color:bisque;
+    clear: right;
+    padding-left:1cm;
+   
+}
+section.viagem{
+    display: inline-block;
+    background-color: black;
+    color: white;
+   
+   width: 100%;
+}
+table{
+    padding: 10px;
+    padding-left: 90px;
+    padding-right: 20px;
+    width: 100%;
+    background-color: black;
+    color: white;
+ 
+}
+p{
+    text-align: center;
+}
+td img {
+    width: 200px;
+    height: 150px;
+   
+    transition: all 0.5s ease;
+    border-radius: 2px;
+    border: solid 0px white;
+    background-color: white;
+   
+}
+td img:hover {
+    box-shadow: 0px 0px 30px;
+    width: 400px;
+    height: 300px;
+    border-color: white;
+    z-index: 100;
+    border: solid 3px white;
+   
+}
+td {
+    max-width: 200px;
+    padding: 50px;
+}
+td div {
+    overflow: visible;
+    display: flex;
+    height: 150px;
+    flex-direction: "row";
+    align-items: center;
+    justify-content: center;
+}
+table {
+    padding: 40px;
+}
+
+.slider{
+    position: relative;
+    background: #000116;
+    width: 800px;
+    min-height: 500px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+  }
+  
+  .slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  
+  .slider .slide .info{
+    position: absolute;
+    color: #222;
+    background: rgba(255, 255, 255, 0.3);
+    width: 75%;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+  }
+  
+  .slider .slide .info h2{
+    font-size: 2em;
+    font-weight: 800;
+  }
+  
+  .slider .slide .info p{
+    font-size: 1em;
+    font-weight: 400;
+  }
+  
+  .navigation{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 1;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  .navigation-visibility{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-visibility .slide-icon{
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background: #000000;
+  }
+  
+  @media (max-width: 900px){
+    .slider{
+      width: 100%;
+    }
+  
+    .slider .slide .info{
+      position: relative;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 500px){
+    .slider .slide .info h2{
+      font-size: 1.8em;
+      line-height: 40px;
+    }
+  
+    .slider .slide .info p{
+      font-size: 0.9em;
+    }
+  }
